@@ -1,9 +1,12 @@
 <h1> Users </h1>
 
 <ul>
-  <%for index in @user do %>
+  <%for index in @users do %>
     <li>
-      <%= index.username %>
+      <a href ="<%= link_to index.username, index %>">
+        <%=  index.username %>
+      </a>
     </li>
   <% end %>
 </ul>
+<%= link_to "New User", new_user_path %>
