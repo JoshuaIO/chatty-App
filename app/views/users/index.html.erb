@@ -1,5 +1,10 @@
 <h1> Users </h1>
 
 <ul>
-  
+  <%for index in @users do %>
+    <li>
+      <%= link_to index.username, index %>
+    </li>
+  <% end %>
 </ul>
+<%= link_to "New User", new_user_path %>
