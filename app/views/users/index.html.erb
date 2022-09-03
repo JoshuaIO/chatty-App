@@ -3,9 +3,7 @@
 <ul>
   <%for index in @users do %>
     <li>
-      <a href ="<%= link_to index.username, index %>">
-        <%=  index.username %>
-      </a>
+      <%= link_to index.username, index %>
     </li>
   <% end %>
 </ul>
